@@ -8,6 +8,10 @@ app.secret_key = "it-is-hard-to-guess"
 CORS(app)
 
 
+@app.route("/")
+def hello():
+    return "hello"
+
 @app.route('/userinfo')
 def get_user_info():
     token = request.headers.get('Authorization')
